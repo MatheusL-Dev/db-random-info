@@ -1,8 +1,10 @@
+TP_CLIENTE = ['P. FISICA', 'P. FISICA', 'P. FISICA', 'P. FISICA', 'P. JURIDICA']
+
 MESES = {'1': 'JANEIRO', '2': 'FEVEREIRO', '3': 'MARÇO', '4': 'ABRIL', '5': 'MAIO', '6': 'JUNHO', '7': 'JULHO', '8': 'AGOSTO', '9': 'SETEMBRO', '10': 'OUTUBRO', '11': 'NOVEMBRO', '12': 'DEZEMBRO'}
 
 SEXOS = ['HOMEM', 'MULHER']
 
-REPS = ['1','9','90']
+REPS = ['1', '1', '1', '1', '9', '9', '90']
 
 LOJAS = ['TES','TMA','TEU','TPP','TPI','TMO','TJS','TEZ','TED','TIM','TEC']
 

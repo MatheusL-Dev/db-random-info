@@ -26,7 +26,7 @@ def get_bairro(rota):
     return random.choice(ZONAS[_rota])
 
 def calendario():
-    periodo = 1095 #Anos convertidos em dias.
+    periodo = 730 #Anos convertidos em dias.
     _lista = []
     for i in range(periodo):
         _lista.append(datetime.datetime.now() - datetime.timedelta(i+1))
@@ -43,7 +43,7 @@ def msg_inicio():
 def start(qtd):
     for i in range(qtd):
         id_cliente = random.randint(1, 100)
-        data_aniversario = str(random.randrange(1,28)) + '/' + str(random.randrange(1,13)) + '/' + str(random.randrange(1940,2003))
+        data_aniversario = str(random.randrange(1,28)) + '/' + str(random.randrange(1,13)) + '/' + str(random.randrange(1951,2003))
         sexo = _choice(SEXOS)
         rep = _choice(REPS)
         telefone = '86 9xxxx-xxxx'
@@ -77,11 +77,8 @@ def start(qtd):
             valor_mercadoria=valor_mercadoria, nce=nce, sub_grupo=sub_grupo, mercadoria=mercadoria,
             rota=rota, bairro=bairro, cidade=cidade, uf=uf, zona=zona, tp_residencia=tp_residencia, tp_cliente=tp_cliente)
         bot.show_info()
-        #bot.gravar_dados()
+        bot.gravar_dados()
 
 def user():
     qtd = input('INFORME A QUANTIDADE DE INFORMAÇÕES DESEJADAS: ')
     return qtd
-
-qtd = int(user())
-start(qtd)
