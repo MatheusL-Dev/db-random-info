@@ -1,2 +1,2 @@
 # db-random-info
-Project for create database with random info.
+An open-source project for create database with random info.
