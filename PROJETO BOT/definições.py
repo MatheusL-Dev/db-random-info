@@ -38,7 +38,26 @@ def calendario():
     return _dia, _mes, _ano 
 
 def msg_inicio():
-    print('********************\nMY BOT IN PYTHON WITH SQL\n********************')
+    print('******************************\nWELCOME THE RANDOM DATABASE\n******************************')
+
+def start_bot():
+
+    qtd = int(user())
+
+    start(qtd)
+
+    msg_fim()
+
+def msg_fim():
+    decisao = input('DESEJA CONTINUAR?(Y/N): ')
+    if decisao.upper() == 'Y':
+        start_bot()
+    elif decisao.upper() == 'N':
+        print('FINALIZANDO...\n------------------------------')
+        exit
+    else:
+        print('------------------------------\nINFORME SOMENTE (Y/N)!!')
+        msg_fim()
 
 def start(qtd):
     for i in range(qtd):
@@ -61,12 +80,8 @@ def start(qtd):
         sub_grupo = _choice(SUB_GRUPOS)
         rota = int(_choice(ROTAS))
         bairro = get_bairro(rota)
-        if rota <=7:
-            cidade = 'TERESINA'
-            uf = 'PI'
-        else:
-            cidade = 'TIMON'
-            uf = 'MA'
+        cidade = 'TERESINA' if rota <=7 else 'TIMON'
+        uf = 'PI' if cidade == 'TERESINA' else 'MA'
         zona = 'URBANA'
         tp_residencia = _choice(RESIDENCIAS)
         tp_cliente = _choice(TP_CLIENTE)
@@ -80,5 +95,5 @@ def start(qtd):
         bot.gravar_dados()
 
 def user():
-    qtd = input('INFORME A QUANTIDADE DE INFORMAÇÕES DESEJADAS: ')
+    qtd = input('INFORME A QUANTIDADE DE DADOS DESEJADOS: ')
     return qtd

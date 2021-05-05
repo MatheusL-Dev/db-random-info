@@ -30,7 +30,7 @@ class Bot:
         self.tp_cliente = tp_cliente
 
     def show_info(self):
-        print('GRAVANDO AS INFORMAÇÕES NO CAMINHO: ','{}'.format(self))
+        print('GRAVANDO OS DADOS NO BANCO DE DADOS MYSQL...')
         print(self.id_cliente, self.data_aniversario, self.sexo, self.rep, self.telefone, self.email, self.loja, self.minuta, self.pedido, self.data_compra, self.mes, self.ano, self.valor_mercadoria, self.nce, self.sub_grupo, self.mercadoria, self.rota, self.bairro, self.cidade, self.uf, self.zona, self.tp_residencia, self.tp_cliente)
 
     def gravar_dados(self):
